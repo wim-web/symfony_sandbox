@@ -8,5 +8,5 @@ services:
     ports:
     - 8000:8000
     volumes:
-      - ../src:/var/www/src:cached
-    working_dir: /var/www/src
+      - ../app:/var/www/app:cached
+    working_dir: /var/www/app

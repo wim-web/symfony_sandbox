@@ -6,12 +6,13 @@
 
 ```
 .
-├── docker/
-│   ├── README.md
-│   ├── .env.sample
-│   ├── docker-compose.yml
-│   └── workspace/
-└── src/
+├── app
+└── docker
+    ├── README.md
+    ├── .env.sample
+    ├── docker-compose.yml
+    └── workspace
+
 
 ```
 
