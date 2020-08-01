@@ -11,6 +11,15 @@ services:
       - ../app:/var/www/app:cached
     working_dir: /var/www/app
 
+  nginx:
+    build:
+      context: ./nginx
+    ports:
+      - 80:80
+    volumes:
+      - ../app/public:/var/www/app/public:cached
+      - ../app/storage:/var/www/app/storage:cached
+
   mysql:
     build:
       context: ./mysql
