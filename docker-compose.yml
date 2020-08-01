@@ -20,6 +20,14 @@ services:
       - ../app/public:/var/www/app/public:cached
       - ../app/storage:/var/www/app/storage:cached
 
+  php-fpm:
+    build:
+      context: ./php-fpm
+    ports:
+      - 9000:9000
+    volumes:
+      - ../app:/var/www/app:cached
+
   mysql:
     build:
       context: ./mysql
