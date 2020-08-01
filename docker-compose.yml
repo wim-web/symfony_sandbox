@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+
+  workspace:
+    build:
+      context: ./workspace
+    ports:
+    - 8000:8000
+    volumes:
+      - ../src:/var/www/src:cached
+    working_dir: /var/www/src
