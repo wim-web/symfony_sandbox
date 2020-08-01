@@ -30,18 +30,32 @@ symfony4.4をインストールする
 docker compose run --rm workspace composer create-project symfony/website-skeleton:"^4.4" .
 ```
 
-webサーバーを立ち上げる
+コンテナを立ち上げる
 
 ```
-docker-compose run --rm --service-ports workspace symfony server:start
+make up
 ```
 
-http://127.0.0.1:8000 にアクセスしてsymfonyの画面が出れば完了
+http://localhost にアクセスして画面が出れば成功
+
+## databaseの設定
+
+symfonyの`.env`のdatabaseの情報を変更する
+
+```
+DATABASE_URL=mysql://root:pass@mysql:3306/db1?serverVersion=8.0
+```
 
 ## その他
 
 workspaceに入る
 
 ```
-docker-compose run --rm workspace ash
+make work
+```
+
+mysqlに入る
+
+```
+make mysqld
 ```
