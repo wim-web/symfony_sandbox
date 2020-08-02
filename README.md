@@ -27,7 +27,7 @@ cp .env.sample .env
 symfony4.4をインストールする
 
 ```
-docker compose run --rm workspace composer create-project symfony/website-skeleton:"^4.4" .
+docker-compose run --rm workspace composer create-project symfony/website-skeleton:"^4.4" .
 ```
 
 コンテナを立ち上げる
